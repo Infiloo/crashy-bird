@@ -7,6 +7,387 @@ input.onButtonPressed(Button.B, function () {
 let emptyObstacleY = 0
 let ticks = 0
 let bird: game.LedSprite = null
+basic.showString("Flappy Bird")
+basic.showLeds(`
+    # # # # #
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    . . . . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # # # #
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    . . . . .
+    `)
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    `)
+basic.showString("By Infiloo")
+basic.showLeds(`
+    . . . . .
+    . . . # .
+    . . . . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . # # .
+    . . . . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . # # # .
+    . . . . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . # # # .
+    . # . . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . # # # .
+    . # . . .
+    . # . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . # # # .
+    . # . . .
+    . # # . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . # # # .
+    . # . . .
+    . # # # .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . # # # .
+    . # . # .
+    . # # # .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . # # # .
+    . # . # .
+    . # # # .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . # # # .
+    . # # # .
+    . # # # .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . # # . .
+    . # # # .
+    . # # # .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . # . . .
+    . # # # .
+    . # # # .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . # # # .
+    . # # # .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . # # .
+    . # # # .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . # # .
+    . . # # .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . # # .
+    . . . # .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . # # .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . # . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . # # # .
+    . # # # .
+    . # # # .
+    . . . . .
+    `)
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # . # #
+    # # # # #
+    # # # # #
+    `)
+basic.showLeds(`
+    # # # # #
+    # . . . #
+    # . . . #
+    # . . . #
+    # # # # #
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . #
+    . . . # .
+    . . # . .
+    . # . . .
+    # . . . .
+    `)
+basic.showLeds(`
+    # . . . #
+    . # . # .
+    . . # . .
+    . # . # .
+    # . . . #
+    `)
+basic.showLeds(`
+    # . . . #
+    . # # # .
+    . # # # .
+    . # # # .
+    # . . . #
+    `)
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    `)
+basic.showLeds(`
+    . # . . .
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    `)
+basic.showLeds(`
+    . # . . .
+    . # . . .
+    # # # # #
+    # # # # #
+    # # # # #
+    `)
+basic.showLeds(`
+    . # . . .
+    . # . . .
+    . # . . .
+    # # # # #
+    # # # # #
+    `)
+basic.showLeds(`
+    . # . . .
+    . # . . .
+    . # . . .
+    . # . . .
+    # # # # #
+    `)
+basic.showLeds(`
+    . # . . .
+    . # . . .
+    . # . . .
+    . # . . .
+    . # # # .
+    `)
+basic.showLeds(`
+    . # . . .
+    . # . . .
+    . # . . .
+    . # . . .
+    . # # # .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . # . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . # . . .
+    . # . . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . # . . .
+    . # # . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . # # . .
+    . # # . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . # . .
+    . # # . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . # . .
+    . . # . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . # . .
+    . . . . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    . . # . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . . . .
+    . # # # .
+    . . # . .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    # # # # #
+    . # # # .
+    . . # . .
+    `)
+basic.showLeds(`
+    . . . . .
+    # # # # #
+    # # # # #
+    . # # # .
+    . . # . .
+    `)
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # # # #
+    . # # # .
+    . . # . .
+    `)
+basic.showLeds(`
+    . . # # #
+    . # . . .
+    . # . # #
+    . # . . #
+    . . # # #
+    `)
+basic.showLeds(`
+    . . # # .
+    . # . . #
+    . # . . #
+    . # . . #
+    . . # # .
+    `)
+basic.showLeds(`
+    . . . . .
+    . # . # .
+    # . # . #
+    . # . # .
+    . . . . .
+    `)
+basic.showString("Infiloo")
 let index = 0
 let obstacles: game.LedSprite[] = []
 bird = game.createSprite(0, 2)

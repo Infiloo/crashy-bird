@@ -1,5 +1,5 @@
 {
-    "name": "crashy-bird",
+    "name": "Flapp Bird",
     "description": "",
     "dependencies": {
         "core": "*",
